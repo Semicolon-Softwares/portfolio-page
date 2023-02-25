@@ -1,0 +1,200 @@
+:root {
+  --pri: #f0554f;
+  --pri-l: #f7dad9;
+  --sec: #262262;
+  --sec-l: #2622627e;
+  --ter:#ffffff;
+  --blk: #000000;
+}
+*
+{
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+body,html
+{
+    margin: 0px;
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--pri-l);
+    color: var(--ter);
+    font-size: 15px;
+}
+a
+{
+    text-decoration: none;
+    color: var(--sec);
+    font-weight: 500;
+}
+.hero-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0px;
+    flex-direction: column;
+    background: #ffffff;
+    border-top: 1px solid var(--sec);
+    /* font-family: 'Kanit', sans-serif; */
+}
+.text-highlight
+{
+    font-weight: 600;
+    font-size: 25px;
+}
+.cta-text
+{
+    color: var(--sec);
+    font-style: italic;
+    font-weight: 600;
+    padding-top:30px;
+}
+.cta
+{
+    background: var(--pri);
+    border: 3px solid var(--sec);
+    color: var(--ter);
+    font-size: 25px;
+    padding: 8px 25px;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 20px;
+}
+.cta-btns-container
+{
+    padding-top: 15px;
+    padding-bottom:50px;
+    display: flex;
+}
+.hero-container .hero-info
+{
+    color: var(--sec);
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.hero-container .hero-text
+{
+    font-weight: 900;
+    margin: 0;
+    color: var(--pri);
+    font-size: 65px;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 0;
+}
+.logo_nav
+{
+    margin: 12px 12px 0px 12px;
+}
+#nav
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#nav a
+{
+    padding: 10px;
+    border: 1px solid var(--sec);
+    margin-right: 10px;
+    font-weight: 500;
+    background-color: var(--ter);
+}
+#nav a.active
+{
+    font-weight: 700;
+    transform: translate(-5px, -5px);
+    box-shadow: 6px 6px 0px 0px var(--sec);
+}
+#nav a.active:hover
+{
+    box-shadow: 6px 6px 0px 0px var(--sec);
+}
+#nav a.active:active
+{
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0px 0px var(--sec);
+}
+#nav a:hover
+{
+    transform: translate(-5px, -5px);
+    box-shadow: 6px 6px 0px 0px var(--sec-l);
+}
+#nav a:active
+{
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0px 0px var(--sec-l);
+}
+.main-logo
+{
+    display: block;
+    background-image: url('images/logo.png');
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    border: 1px solid var(--sec);
+}
+.logo_nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-text::after
+{
+    content: "semicolon_softwares";
+    margin-left: 10px;
+    font-weight: 700;
+}
+.main-text:hover::after {
+    content: "";
+    animation: bounce 2.5s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+  0%   { content: "Semicolon_softwares"; }
+  2.6%   { content: "s3micolon_softwares"; }
+  5.2%   { content: "seMicolon_softwares"; }
+  7.8%   { content: "sem;colon_softwares"; }
+  10.4%   { content: "semiColon_softwares"; }
+  13%   { content: "semic0lon_softwares"; }
+  15.6%   { content: "semicoLon_softwares"; }
+  18.2%   { content: "semicol0n_softwares"; }
+  20.8%   { content: "semicoloN_softwares"; }
+  23.4%   { content: "semicolon_softwares"; }
+  26%   { content: "semicolon_Softwares"; }
+  28.6%   { content: "semicolon_s0ftwares"; }
+  31.2%   { content: "semicolon_soFtwares"; }
+  33.8%   { content: "semicolon_sofTwares"; }
+  36.4%   { content: "semicolon_softWares"; }
+  39%   { content: "semicolon_softwAres"; }
+  41.6%   { content: "semicolon_softwaRes"; }
+  44.2%   { content: "semicolon_softwar3s"; }
+  46.8%   { content: "semicolon_softwareS"; }
+  50%   { content: "semicolon_softwares"; }
+  52%   { content: "semicolon_softwareS"; }
+  54.6%   { content: "semicolon_softwar3s"; }
+  57.2%   { content: "semicolon_softwaRes"; }
+  59.8%   { content: "semicolon_softwaRes"; }
+  62.4%   { content: "semicolon_softwAres"; }
+  65%   { content: "semicolon_softWares"; }
+  67.6%   { content: "semicolon_sofTwares"; }
+  70.2%   { content: "semicolon_soFtwares"; }
+  72.8%   { content: "semicolon_s0ftwares"; }
+  75.4%   { content: "semicolon_Softwares"; }
+  78%   { content: "semicolon_softwares"; }
+  80.6%   { content: "semicoloN_softwares"; }
+  83.2%   { content: "semicol0n_softwares"; }
+  85.8%   { content: "semicoLon_softwares"; }
+  88.4%   { content: "semic0lon_softwares"; }
+  91%   { content: "semiColon_softwares"; }
+  93.6%   { content: "sem;colon_softwares"; }
+  96.2%   { content: "seMicolon_softwares"; }
+  98.8%   { content: "s3micolon_softwares"; }
+  100%   { content: "Semicolon_softwares"; }
+}
