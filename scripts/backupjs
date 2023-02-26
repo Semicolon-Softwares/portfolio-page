@@ -1,0 +1,57 @@
+// import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+// import { TextGeometry } from 'https://unpkg.com/three/examples/jsm/geometries/TextGeometry.js';
+const scene = new THREE.Scene();
+var canvas_width = $("#background_element").innerWidth();
+var canvas_height = $("#background_element").innerWidth();
+const camera = new THREE.PerspectiveCamera( 75, canvas_width/ canvas_height, 0.1, 1000 );
+
+//Model Loader
+// const loader = new GLTFLoader();
+// loader.load( 'path/to/model.glb', function ( gltf ) {
+//     scene.add( gltf.scene );
+// }, undefined, function ( error ) {
+//     console.error( error );
+// });
+
+const canvas = document.getElementById('background_element');
+const renderer = new THREE.WebGLRenderer({canvas: canvas});
+// const renderer = new THREE.WebGLRenderer();
+
+renderer.setSize( canvas_width, canvas_height );
+// document.body.appendChild( renderer.domElement );
+
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0xf0554f } );
+const cube = new THREE.Mesh( geometry, material );
+// var text = ";";
+// const cube = new THREE.TextGeometry( text, {
+
+//     font: 'helvetiker',
+
+//     size: 70,
+//     height: 20,
+//     curveSegments: 44,
+
+//     bevelThickness: 2,
+//     bevelSize: 2,
+//     bevelEnabled: false
+
+// } );
+
+scene.background = new THREE.Color( 0xffffff );
+const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
+scene.add( cube );
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame( animate );
+
+    // cube.rotation.x += 0.001;
+    cube.rotation.y += 0.002;
+
+    renderer.render( scene, camera );
+}
+
+animate();

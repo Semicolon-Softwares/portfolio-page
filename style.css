@@ -41,12 +41,18 @@ a
     content: ">_ ";
     font-weight: 900;
 }
+.bg_img_container
+{
+    display: flex;
+    width: 540px;
+    height: 540px;
+}
 .hero-container
 {
     display: flex;
-    
+    margin-right: 30px;
     flex-direction: column;
-    /* font-family: 'Kanit', sans-serif; */
+    justify-content: space-evenly;
 }
 .hero-info
 {
@@ -65,6 +71,7 @@ a
 }
 .cta
 {
+    transition: none;
     background: var(--pri);
     border: 2px solid var(--sec);
     color: var(--ter);
@@ -141,6 +148,11 @@ a
     transform: translate(-2px, -2px);
     box-shadow: 3px 3px 0px 0px var(--sec-l);
 }
+#background_element
+{
+    height: 100%;
+    width: 100%;
+}
 .main-logo
 {
     display: block;
@@ -166,7 +178,7 @@ a
 {
     content: "semicolon_softwares";
     margin-left: 10px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .main-text:hover::after {
     content: "";
